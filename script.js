@@ -12,17 +12,36 @@ const perguntas = {
 }
 const perguntas = [
     {
-        enunciado: "Pergunta1",
+        enunciado: "Qual a arma mais forte do jogo",
         Alternativas: [
-            "Alternativa1"
-            "alternativa2"
+            {
+                texto:"Zenith"
+                afirmacao:"afirmacao"
+            }
+            "Zenith"
+            "Fúria das estrelas"
         ]
      },
      {
-        enunciado: "Pergunta2",
+        enunciado: "Qual o primeiro boss do jogo?",
         Alternativas: [
-            "Alternativa1"
-            "alternativa2"
+            {
+                texto:"Rei Slime"
+                afirmacao:"afirmacao"
+            }
+            "Rei Slime"
+            "Olho de Cthulhu"
+        ],
+     },
+     {
+        enunciado: "Qual o último boss do game",
+        Alternativas: [
+            {
+                texto:"Senhor da Lua"
+                afirmacao:"afirmacao"
+            }
+            "Ocultista Lunático"
+            "Senhor da Lua"
         ],
      },
     

@@ -62,7 +62,7 @@ const perguntas = [
             botaoAlternativa.addEventListener("click",function(){
                 atual++;
                 mostraPergunta();
-            }
+            })
             
         }
      }

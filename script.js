@@ -44,13 +44,18 @@ const perguntas = [
             "Senhor da Lua"
         ],
      },
-    
+];
      let atual = 0;
      let perguntaAtual;
 
      function mostraPergunta (){
+        if (atual >= perguntas.lenght){
+            mostraResultado();
+            return;
+        }
         perguntaAtual = perguntas[atual];
         caixaPerguntas.textContent = perguntaAtual.enunciado;
+        caixaAlternativas.textContent= " ";
         mostraALternativba ();
      }
 
@@ -66,4 +71,13 @@ const perguntas = [
             
         }
      }
-];
+function respostaSelecionada(opcaoSelecionada){
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historiaFinal = afirmacoes;
+    atual++;
+    mostraPergunta();
+}
+
+function mostraResultado(){
+    
+}

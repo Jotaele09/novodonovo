@@ -115,3 +115,4 @@ caixaAlternativas.textContent = "";
 }
 
 mostraPergunta();
+   

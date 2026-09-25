@@ -1,5 +1,5 @@
 :root{
-    --cor-fundo:var(violet);
+    --cor-fundo:var(rgb(241, 226, 11));
     --cor-principal:var(green);
     --cor-secundaria:var(red);
     --cor-destaque:var(white);

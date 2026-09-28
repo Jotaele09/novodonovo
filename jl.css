@@ -1,6 +1,6 @@
 :root{
     --cor-fundo:rgb(91, 3, 126);
-    --cor-principal:(green);
+    --cor-principal:(rgb(255, 217, 0));
     --cor-secundaria:(red);
     --cor-destaque:(rgb(194, 7, 7));
     --cor-texto:(blue);

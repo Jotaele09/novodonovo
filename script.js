@@ -6,40 +6,40 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Assim que você entra no mundo de Terraria você se depara com um Npc.Qual npc é este?",
         alternativas: [
             {
-                texto: "Isso é assustador!",
+                texto: "Comerciante",
                 afirmacao: "Ficou assustado com a rapidez com que a tecnologia evoluiu."
             },
             {
-                texto: "Isso é maravilhoso!",
+                texto: "O Guia",
                 afirmacao: "Ficou encantado com as possibilidades da nova tecnologia."
             }
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial (IA), uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre IA. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de tecnologia em sala de aula. Qual atitude você toma?",
+        enunciado: "Após derrotar os pilares celestiais, o mundo começa a tremer e uma entidade é invocada. Quem é esta entidade?",
         alternativas: [
             {
-                texto: "Utilizar uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
+                texto: "Senhor da lua (MoonLord).",
                 afirmacao: "Usou a IA como uma ferramenta de estudos para resumir e entender conteúdos difíceis."
             },
             {
-                texto: "Escrever o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+                texto: "Ocultista Lunático.",
                 afirmacao: "Preferiu confiar nas suas próprias pesquisas e nas conversas com os colegas para criar o trabalho."
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Após derrotar a Imperatriz da Luz diante a luz do dia, ela lhe concede um item específico. Qual item é esse?",
         alternativas: [
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendo a importância de proteger os trabalhadores.",
+                texto: "Último Prima (Last prima).",
                 afirmacao: "Defendeu a proteção dos empregos humanos contra a automação excessiva."
             },
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
+                texto: "Terraprisma.",
                 afirmacao: "Acredita que a IA vai transformar o mercado e criar novas profissões do futuro."
             }
         ]

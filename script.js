@@ -45,27 +45,27 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Qual o minério que se destaca por sua cor verde?",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
+                texto: "Clorofita",
                 afirmacao: "Preferiu criar suas próprias artes de forma tradicional e manual no computador."
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
+                texto: "Luminita.",
                 afirmacao: "Aproveitou os geradores automáticos de imagem para expressar suas ideias visualmente."
             }
         ]
     },
     {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda de uma IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz?",
+        enunciado: "No Terraria existe quatro classes, que determinam o futuro do jogador no jogo. Qual seriam essas classes?",
         alternativas: [
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
+                texto: "Healer, Ranger, Melle e Mage",
                 afirmacao: "Entendeu que a IA pode cometer erros e que o toque e a revisão humana são indispensáveis."
             },
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
+                texto: "Mage, Melle, Summoner e Ranger.",
                 afirmacao: "Considerou que saber fazer as perguntas certas para a IA já é uma forma válida de contribuição."
             }
         ]

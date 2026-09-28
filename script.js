@@ -10,11 +10,15 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Comerciante",
-                afirmacao: "Ficou assustado com a rapidez com que a tecnologia evoluiu."
+                afirmacao: [
+                    "afirmacao"
+                ]
             },
             {
                 texto: "O Guia",
-                afirmacao: "Ficou encantado com as possibilidades da nova tecnologia."
+                afirmacao: [
+                    "afirmacao"
+                ]
             }
         ]
     },
@@ -23,11 +27,15 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Senhor da lua (MoonLord).",
-                afirmacao: "Usou a IA como uma ferramenta de estudos para resumir e entender conteúdos difíceis."
+                afirmacao: [
+                    "afirmacao."
+                ]
             },
             {
                 texto: "Ocultista Lunático.",
-                afirmacao: "Preferiu confiar nas suas próprias pesquisas e nas conversas com os colegas para criar o trabalho."
+                afirmacao: [
+                    "afirmacao."
+                ]
             }
         ]
     },
@@ -36,11 +44,15 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Último Prima (Last prima).",
-                afirmacao: "Defendeu a proteção dos empregos humanos contra a automação excessiva."
+                afirmacao: [
+                    "afirmacao."
+                ]
             },
             {
                 texto: "Terraprisma.",
-                afirmacao: "Acredita que a IA vai transformar o mercado e criar novas profissões do futuro."
+                afirmacao: [
+                    "Afirmacao."
+                ]
             }
         ]
     },
@@ -49,11 +61,15 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Clorofita",
-                afirmacao: "Preferiu criar suas próprias artes de forma tradicional e manual no computador."
+                afirmacao: [
+                    "afirmacao"
+                ]
             },
             {
                 texto: "Luminita.",
-                afirmacao: "Aproveitou os geradores automáticos de imagem para expressar suas ideias visualmente."
+                afirmacao: [
+                    "afirmacao"
+                ]
             }
         ]
     },
@@ -62,11 +78,15 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Healer, Ranger, Melle e Mage",
-                afirmacao: "Entendeu que a IA pode cometer erros e que o toque e a revisão humana são indispensáveis."
+                afirmacao: [
+                    "afirmacao"
+                ]
             },
             {
                 texto: "Mage, Melle, Summoner e Ranger.",
-                afirmacao: "Considerou que saber fazer as perguntas certas para a IA já é uma forma válida de contribuição."
+                afirmacao: [
+                    "afirmacao"
+                ]
             }
         ]
     }
@@ -104,7 +124,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Meus parabéns...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }

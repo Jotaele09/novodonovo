@@ -2,7 +2,7 @@
     --cor-fundo:var(rgb(241, 226, 11));
     --cor-principal:var(green);
     --cor-secundaria:var(red);
-    --cor-destaque:var(white);
+    --cor-destaque:var(rgb(194, 7, 7));
     --cor-texto:var(blue);
 
 }

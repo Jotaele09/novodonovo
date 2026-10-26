@@ -157,3 +157,41 @@ function mostraResultado() {
     // Adiciona o ouvinte de clique ao botão para reiniciar o jogo
     botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
+
+function jogaNovamente() {
+    atual = 0;
+    historiaFinal = "";
+    caixaResultado.classList.remove("mostrar");
+    mostraPergunta();
+}
+
+function mostraResultado() {
+    caixaPerguntas.textContent = "Em 2049...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+    caixaResultado.classList.add("mostrar");
+    
+    // Corrigido: sem parênteses na função jogaNovamente
+    botaoJogarNovamente.addEventListener("click", jogaNovamente);
+}
+
+import { aleatorio, nome } from './aleatorio.js';
+import { perguntas } from './perguntas.js';
+
+function mostraResultado() {
+    caixaPerguntas.textContent = `Em 2049, ${nome}`;
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+    caixaResultado.classList.add("mostrar");
+    botaoJogarNovamente.addEventListener("click", jogaNovamente);
+}
+
+function substituiNome() {
+    for (const pergunta of perguntas) {
+        pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+    }
+}
+
+// Chamadas de execução no final do arquivo:
+substituiNome();
+mostraPergunta();

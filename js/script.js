@@ -1,96 +1,12 @@
+import { aleatorio, nome } from './aleatorio.js';
+import { perguntas } from './perguntas.js';
+
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
-
-const perguntas = [
-    {
-        enunciado: "Assim que você entra no mundo de Terraria você se depara com um Npc.Qual npc é este?",
-        alternativas: [
-            {
-                texto: "Comerciante",
-                afirmacao: [
-                    "afirmacao"
-                ]
-            },
-            {
-                texto: "O Guia",
-                afirmacao: [
-                    "afirmacao"
-                ]
-            }
-        ]
-    },
-    {
-        enunciado: "Após derrotar os pilares celestiais, o mundo começa a tremer e uma entidade é invocada. Quem é esta entidade?",
-        alternativas: [
-            {
-                texto: "Senhor da lua (MoonLord).",
-                afirmacao: [
-                    "afirmacao."
-                ]
-            },
-            {
-                texto: "Ocultista Lunático.",
-                afirmacao: [
-                    "afirmacao."
-                ]
-            }
-        ]
-    },
-    {
-        enunciado: "Após derrotar a Imperatriz da Luz diante a luz do dia, ela lhe concede um item específico. Qual item é esse?",
-        alternativas: [
-            {
-                texto: "Último Prima (Last prima).",
-                afirmacao: [
-                    "afirmacao."
-                ]
-            },
-            {
-                texto: "Terraprisma.",
-                afirmacao: [
-                    "Afirmacao."
-                ]
-            }
-        ]
-    },
-    {
-        enunciado: "Qual o minério que se destaca por sua cor verde?",
-        alternativas: [
-            {
-                texto: "Clorofita",
-                afirmacao: [
-                    "afirmacao"
-                ]
-            },
-            {
-                texto: "Luminita.",
-                afirmacao: [
-                    "afirmacao"
-                ]
-            }
-        ]
-    },
-    {
-        enunciado: "No Terraria existe quatro classes, que determinam o futuro do jogador no jogo. Qual seriam essas classes?",
-        alternativas: [
-            {
-                texto: "Healer, Ranger, Melle e Mage",
-                afirmacao: [
-                    "afirmacao"
-                ]
-            },
-            {
-                texto: "Mage, Melle, Summoner e Ranger.",
-                afirmacao: [
-                    "afirmacao"
-                ]
-            }
-        ]
-    }
-];
+const botaoJogarNovamente = document.querySelector(".novamente-btn");
 
 let atual = 0;
 let perguntaAtual;
@@ -117,44 +33,17 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = aleatorio (opcaoSelecionada.afirmacao);
+    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Meus parabéns...";
+    caixaPerguntas.textContent = `Em 2049, ${nome}`;
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
-}
-
-
-function aleatorio (lista){
-    const posicao = Math floor(Math.random()*lista.lenght);
-    return lista [posicao];
-}
-
-mostraPergunta();
-
-import { aleatorio } from './aleatorio.js';
-import { perguntas } from './perguntas.js';
-   
-const textoResultado = document.querySelector(".texto-resultado");
-const botaoJogarNovamente = document.querySelector(".novamente-btn");
-
-function jogaNovamente() {
-    atual = 0;
-    historiaFinal = "";
-    mostraPergunta();
-}
-
-function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
-    
-    // Adiciona o ouvinte de clique ao botão para reiniciar o jogo
+    caixaResultado.classList.add("mostrar");
     botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
 
@@ -165,33 +54,11 @@ function jogaNovamente() {
     mostraPergunta();
 }
 
-function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
-    caixaResultado.classList.add("mostrar");
-    
-    // Corrigido: sem parênteses na função jogaNovamente
-    botaoJogarNovamente.addEventListener("click", jogaNovamente);
-}
-
-import { aleatorio, nome } from './aleatorio.js';
-import { perguntas } from './perguntas.js';
-
-function mostraResultado() {
-    caixaPerguntas.textContent = `Em 2049, ${nome}`;
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
-    caixaResultado.classList.add("mostrar");
-    botaoJogarNovamente.addEventListener("click", jogaNovamente);
-}
-
 function substituiNome() {
     for (const pergunta of perguntas) {
         pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
     }
 }
 
-// Chamadas de execução no final do arquivo:
 substituiNome();
 mostraPergunta();

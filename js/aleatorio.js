@@ -1,10 +1,6 @@
-export function aleatorio(lista) {
-    // Código da função aleatório aqui
-}
-
 const nomes = ["Ana", "Fernanda", "Maria Eduarda", "Marcelo", "Amanda", "Gustavo", "Gabriel"];
 
-export function aleatorio (lista){
+export function aleatorio(lista) {
     const posicao = Math.floor(Math.random() * lista.length);
     return lista[posicao];
 }

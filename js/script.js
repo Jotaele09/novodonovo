@@ -136,4 +136,24 @@ function aleatorio (lista){
 }
 
 mostraPergunta();
+
+import { aleatorio } from './aleatorio.js';
+import { perguntas } from './perguntas.js';
    
+const textoResultado = document.querySelector(".texto-resultado");
+const botaoJogarNovamente = document.querySelector(".novamente-btn");
+
+function jogaNovamente() {
+    atual = 0;
+    historiaFinal = "";
+    mostraPergunta();
+}
+
+function mostraResultado() {
+    caixaPerguntas.textContent = "Em 2049...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+    
+    // Adiciona o ouvinte de clique ao botão para reiniciar o jogo
+    botaoJogarNovamente.addEventListener("click", jogaNovamente);
+}
